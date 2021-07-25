@@ -23,6 +23,7 @@
     <name>microservice-one</name>
     <description>Microservice Snow project</description>
     <packaging>pom</packaging>
+
     <properties>
         <java.version>11</java.version>
         <spring-boot.version>2.5.3</spring-boot.version>
@@ -33,8 +34,21 @@
         <spring-kafka.version>2.6.2</spring-kafka.version>
         <spring-retry.version>1.3.0</spring-retry.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
+
+<!--            Local Dep-->
+            <dependency>
+                <groupId>com.microservice.snow</groupId>
+                <artifactId>app-config-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microservice.snow</groupId>
+                <artifactId>common-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
